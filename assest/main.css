@@ -1,0 +1,675 @@
+/* General Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('/assets/images/profile.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, #00796b, #004d40); /* Unique gradient background */
+    padding: 8px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Soft shadow for a floating effect */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-brand img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.navbar-brand-text {
+    font-size: 24px;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-left: 20px;
+}
+
+h1 {
+    color: #f0f4f3;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+/* Resume Container */
+.resume-container {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(0, 0, 0, 0.3)); /* Soft gradient background */
+    margin: 50px auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Strong shadow for depth */
+    backdrop-filter: blur(12px); /* Subtle blur effect */
+}
+
+/* Section Styles */
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 22px;
+    color: #004d40;
+    border-bottom: 2px solid #00796b; /* Accent color for the border */
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Profile Picture */
+.profile-picture {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Button Styles */
+button {
+    background-color: #00796b; /* Unique teal color */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: block;
+    margin: 20px auto;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #004d40; /* Darker shade on hover */
+}
+
+/* Skills List */
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+ul li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: #00796b;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #004d40;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer p {
+    font-size: 14px;
+}
+
+.footer span {
+    font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .resume-container {
+        width: 90%;
+    }
+
+    .navbar-brand-text {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .profile-picture {
+        width: 100px;
+        height: 100px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar Styles */
+.navbar {
+    background-color: #2C3E50; /* Dark blue-gray background */
+    color: white;
+    padding: 15px 0;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Brand Section */
+.brand-and-toggler {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.navbar-brand {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.navbar-brand-text {
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.navbar-brand-text span {
+    font-weight: normal;
+}
+
+/* Navbar Heading */
+.navbar-heading {
+    font-size: 28px;
+    font-weight: 700;
+    color: #ECF0F1; /* Light gray color */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-left: 20px;
+}
+
+/* Hover Effects */
+.navbar-brand:hover .navbar-brand-text {
+    color: #1ABC9C; /* Teal color for hover effect */
+}
+
+.navbar-heading:hover {
+    color: #1ABC9C;
+}
+/* Base Form Styling */
+.cv-form .form-elem {
+    margin-bottom: 1.5rem;
+}
+
+.cv-form .form-label {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+}
+
+.cv-form .form-control {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.cv-form .form-control:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* Input Field Styling for Each Section */
+.cv-form-row-title h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.cv-form-row-about .cols-3,
+.cv-form-row-achievement .cols-2,
+.cv-form-row-experience .cols-3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cv-form .form-text {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.repeater-add-btn,
+.repeater-remove-btn {
+    font-size: 20px;
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.repeater-add-btn:hover,
+.repeater-remove-btn:hover {
+    background-color: #2980b9;
+}
+
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f9;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Resume Preview Section */
+#print_area {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.preview-cnt {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.preview-cnt-l {
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 30px;
+    width: 35%;
+    border-radius: 8px 0 0 8px;
+}
+
+.preview-cnt-r {
+    background-color: #fff;
+    padding: 30px;
+    width: 65%;
+    border-radius: 0 8px 8px 0;
+}
+
+/* Profile Image */
+.preview-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/* Preview Items */
+.preview-item {
+    margin-bottom: 15px;
+}
+
+.preview-item-val {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ecf0f1;
+}
+
+.preview-item-name {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.preview-item-val.text-uppercase {
+    text-transform: uppercase;
+}
+
+.fw-6 {
+    font-weight: 600;
+}
+
+.ls-1 {
+    letter-spacing: 1px;
+}
+
+/* Title for each section */
+.preview-blk-title h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ecf0f1;
+    margin-bottom: 10px;
+}
+
+/* Section list items */
+.preview-blk-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.preview-blk-list .preview-item {
+    font-size: 16px;
+    color: #ecf0f1;
+}
+
+/* Skills List */
+.skills-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-items .preview-item {
+    background-color: #3498db;
+    padding: 8px 15px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: white;
+}
+
+/* Achievements, Education, Experience, Projects List */
+.preview-blk {
+    margin-bottom: 30px;
+}
+
+.preview-blk-list .preview-item {
+    margin-bottom: 10px;
+}
+
+/* Download Button Section */
+.print-btn-sc {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.print-btn {
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.print-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .preview-cnt {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .preview-cnt-l, .preview-cnt-r {
+        width: 100%;
+        border-radius: 8px;
+    }
+
+    .preview-cnt-l {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .preview-cnt {
+        padding: 20px;
+    }
+
+    .preview-item-val {
+        font-size: 14px;
+    }
+}
+/* Button Section - Professional Design */
+.print-btn-sc {
+    padding: 30px 0;
+    text-align: center;
+    background-color: #f4f7f9; /* Light background for contrast */
+}
+
+.print-btn {
+    padding: 12px 25px;
+    background-color: #00796b; /* Primary color */
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.print-btn:hover {
+    background-color:#035047; /* Darker shade on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.print-btn:active {
+    transform: translateY(1px); /* Button depress effect */
+}
+
+.print-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.5); /* Focus ring for accessibility */
+}
+/* Footer Styling - Professional and Clean */
+.footer {
+    background-color: #333; /* Dark background for contrast */
+    padding: 30px 0;
+    color: #fff; /* White text color */
+    text-align: center;
+}
+
+.footer-content p {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 0;
+    color: #ccc; /* Lighter gray text for contrast */
+    letter-spacing: 0.5px;
+}
+
+.footer-content span {
+    font-weight: 600;
+    color: #3498db; /* Accent color for the brand name */
+}
+
+.footer-content p:hover {
+    color: #fff; /* Slight color change on hover for the text */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.footer-content p a {
+    color: #3498db; /* Accent color for any links */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-content p a:hover {
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+.footer-content p span:hover {
+    color: #2980b9; /* Darker shade of blue for hover effect on the span */
+}
+
+/* General Form Styles */
+.cv-form .form-elem {
+    margin-bottom: 1.5rem;
+}
+
+.cv-form .form-label {
+    font-weight: 600;
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 0.5rem;
+}
+
+.cv-form .form-control {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.cv-form .form-control:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.cv-form .form-text {
+    color: #e74c3c;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.cv-form-row-title h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.cols-3 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.cols-3 .form-elem {
+    flex: 1;
+}
+
+.cols-2 {
+    display: flex;
+    gap: 1rem;
+}
+
+.cols-2 .form-elem {
+    flex: 1;
+}
+
+.repeater-add-btn,
+.repeater-remove-btn {
+    font-size: 20px;
+    background-color: #00796b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.repeater-add-btn:hover,
+.repeater-remove-btn:hover {
+    background-color: #2980b9;
+}
+/* Additional styling for new sections */
+.cv-form-row-title h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.cv-form-row .form-elem {
+    margin-bottom: 1rem;
+}
+
+.cols-3 .form-elem {
+    flex: 1;
+}
+
+.repeater-add-btn,
+.repeater-remove-btn {
+    font-size: 20px;
+    background-color: #3498db;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.repeater-add-btn:hover,
+.repeater-remove-btn:hover {
+    background-color: #2980b9;
+}
+
+.repeater-remove-btn {
+    background-color: #e74c3c;
+}
+
+.repeater-remove-btn:hover {
+    background-color: #c0392b;
+}
+
